@@ -1,0 +1,44 @@
+﻿using projetoFinalSite.Controllers;
+@model AnimalModel
+
+
+<h1 class="display-4">Novo amiguinho? Eba!</h1>
+
+<form method ="post" asp-controller="Animal" asp-action="Cadastrar">
+    <div class="mb-3">
+        <label for="tipo" class="form-label">Tipo</label>
+        <input type="text" class="form-control" asp-for="Tipo">
+        <div id="tipoHelp" class="form-text">ex. cachorro, gato, papagaio, coelho, etc.</div>
+    </div>
+
+    <div class="mb-3">
+        <label for="porte" class="form-label">Porte/Tamanho</label>
+        <input type="text" class="form-control" asp-for="Porte" id="Porte">
+        <div id="porteHelp" class="form-text">Grande, médio, pequeno ou tamanho em cm.</div>
+    </div>
+
+    <div class="mb-3">
+        <label for="natureza" class="form-label">Natureza</label>
+        <input type="text" class="form-control" asp-for="Natureza" placeholder="">
+        <div id="naturezaHelp" class="form-text">ex. resgate ruas, resgate tráfico, resgate maus-tratos, ninhada, etc..</div>
+    </div>
+
+    <div class="mb-3">
+        <label for="idade" class="form-label">Idade</label>
+        <input type="text" class="form-control" asp-for="Idade" placeholder="">
+    </div>
+
+    <div class="mb-3">
+        <label for="cidade" class="form-label">Cidade</label>
+        <input type="text" class="form-control" asp-for="Cidade" placeholder="">
+    </div>
+
+    <div class="mb-3">
+        <label for="personalidade" class="form-label">Personalidade</label>
+        <input type="text" class="form-control" asp-for="Personalidade" placeholder="">
+        <div id="personalidadeHelp" class="form-text">ex. calmo, dócio, introvertido, sociavél, etc.</div>
+    </div>
+    <button type="submit" class="btn btn-primary">Adicionar</button>
+</form>
+
+

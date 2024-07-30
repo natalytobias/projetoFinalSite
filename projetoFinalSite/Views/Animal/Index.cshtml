@@ -1,0 +1,54 @@
+﻿@model IEnumerable<AnimalModel>
+
+<div class="text-center">
+
+
+
+    <h1 class="display-4">Lista administrativa de todos os animais cadastrados</h1>
+    <p>Essa área é restrita a apenas parceiros, administradores e desenvolvedores.</p>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Tipo</th>
+                <th scope="col">Idade</th>
+                <th scope="col">Porte</th>
+                <th scope="col">Natureza</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Cidade</th>
+                <th></th>
+            </tr>
+        </thead>
+        
+
+                @if(Model != null)
+                {
+
+                    @foreach(var animal in Model)
+                    {
+                    <tbody>
+                        <tr>
+                            <td>@animal.Tipo</td>
+                            <td>@animal.Idade</td>
+                            <td>@animal.Porte</td>
+                            <td>@animal.Natureza</td>
+                            <td>@animal.Personalidade</td>
+                            <td>@animal.Cidade</td>
+                            <td>
+                                <a asp-controller="Animal" asp-action="Editar" asp-route-id="@animal.Id" class="btn btn-warning mx-2">Editar</a>
+                            <a asp-controller="Animal" asp-action="Excluir" asp-route-id="@animal.Id" class="btn btn-danger mx-2">Excluir</a>
+                            </td>
+
+                        </tr>
+                    </tbody>
+                    }
+                    
+                }
+                
+            
+        
+    </table>
+
+    <a class="btn btn-primary"  asp-controller="Animal" asp-action="Cadastro">cadastrar novo animal</a>
+</div>
+

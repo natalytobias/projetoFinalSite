@@ -1,0 +1,47 @@
+﻿using ProjetoFinalSite.Dto
+@model ParceiroRegisterDto
+
+
+<h1>Registro de parceiros</h1>
+
+<div asp-validation-summary="All" class="text-danger"></div>
+<form asp-action="Registrar" asp-controller="Login" method="post">
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="nome" asp-for="Email">
+    </div>
+
+    <div class="mb-3">
+        <label for="site" class="form-label">Site</label>
+        <input type="text" class="form-control" id="site" asp-for="Site">
+    </div>
+
+    <div class="mb-3">
+        <label for="endereco" class="form-label">Endereço</label>
+        <input type="text" class="form-control" id="endereco" asp-for="Endereco">
+    </div>
+
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" asp-for="Email">
+    </div>
+
+
+
+    <div class="mb-3">
+        <label for="senha" class="form-label">Senha</label>
+        <input type="password" class="form-control" id="senha" asp-for="Senha">
+    </div>
+    <div class="mb-3">
+        <label for="senha" class="form-label">Confirmar senha</label>
+        <input type="password" class="form-control" id="senha" asp-for="ConfirmaSenha">
+    </div>
+
+    <div>
+        <button type="submit" class="btn btn-primary w-25 mx-2">Voltar</button>
+        <a asp-action="Index" asp-controller="Login" class="btn w-25">Cadastrar-se</a>
+    </div>
+
+
+</form>
